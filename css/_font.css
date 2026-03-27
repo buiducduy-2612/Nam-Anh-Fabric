@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Denim';
+    src: url(../font/DenimINK-SemiBold.otf);
+}
+@font-face {
+    font-family: 'NeueL';
+    src: url(../font/FKGroteskNeue-Light.otf);
+    letter-spacing: 7px;
+}
+@font-face {
+    font-family: 'NeueM';
+    src: url(../font/FKGroteskNeue-Medium.otf);
+    letter-spacing: 7px;
+}
+@font-face {
+    font-family: 'NeueR';
+    src: url(../font/FKGroteskNeue-Regular.otf);
+    letter-spacing: 7px;
+}
+.f-denim{
+    font-family: 'Denim';
+}
+.f-neuel{
+    font-family: 'NeueL';
+}
+.f-neuem{
+    font-family: 'NeueM';
+}
+.f-neuer{
+    font-family: 'NeueR';
+}
+.f-raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+}

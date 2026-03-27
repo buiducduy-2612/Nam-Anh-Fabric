@@ -1,0 +1,587 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    scroll-behavior: smooth;
+}
+#banner{
+min-height: 100vh;
+background: url('../images/namanh_profile/3-E.jpg');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+z-index: 1;
+color: white;
+background-attachment: fixed;
+}
+#banner:before{
+    position: absolute;
+    content:'';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: .6;
+}
+.section-history .btn-default{
+    min-width: 200px;
+}
+.section-history .btn-default.btn-repeet{
+    background: black;
+    border: solid 2px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(10px);
+    color: white;
+}
+.section-history .btn-default.btn-clean{
+    background: #0185cb;
+    border: solid 2px #0185cb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.menu-btn{
+    font-size: 1.2rem;
+}
+.banner-menu{
+    align-self: flex-start;
+}
+#banner .header-sub{
+    color: #919191;
+    font-weight: bold;
+}
+.socials{
+    list-style: none;
+    position: absolute;
+    height: 100%;
+    right: 20px;
+    top: 0;
+}
+.social-item{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border: solid 1px white;
+    font-size: 15px;
+    margin: 10px 0;
+    background: transparent;
+    color: white;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.social-item:hover{
+    background: white;
+    color: black;
+}
+.container-desktop{
+    position: relative;
+}
+#banner .btn-default{
+    background: none;
+    color: white;
+    border: solid 2px white;
+}
+
+.milestone-list{
+    list-style: none;
+    border-top: solid 1px black;
+    display: flex;
+}
+.milestone-list li{
+    padding: 10px 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+    color: #000000;
+    min-width: 230px;
+    width: calc(100% / 6);
+}
+.milestone-list li b{
+    color: black;
+}
+.milestone-list li b.blue{
+    color: #000000;
+}
+.milestone-list li::before{
+    height: 20px;
+    width: 20px;
+    content:'';
+    border-radius: 100%;
+    background: #000000;
+    left: -10px;
+    top: -10px;
+    z-index: 1;
+    position: absolute;
+
+}
+.milestone-list li .point{
+    color: black;
+}
+.milestone-list li.active .point{
+    z-index: 2;
+    position: relative;
+}
+.milestone-list li.active .des{
+    color: #000000;
+    z-index: 2;
+    position: relative;
+}
+
+
+.milestone-list li.active::before{
+   z-index: 3;
+}
+.milestone-list li.active::after{
+    width: 100%;
+    height: 100%;
+    content:'';
+    position: absolute;
+    top: -2px;
+    left: -10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+.milestone-list li.active:hover::after{
+    height: 100%;
+}
+.milestone-list li .mile-point{
+    position: relative;
+}
+.milestone-list li .mile-point .point{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.milestone-list li .mile-point .des{
+    font-size: 1rem;
+}
+.section-header{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: absolute;
+    font-weight: bold;
+    font-size: 70px;
+    z-index: -1;
+    opacity: .3;
+    color: #ababab;
+    white-space: nowrap;
+    padding-top: 20px;
+}
+.section-history{
+    position: relative;
+}
+.section-history .section-header{
+    z-index: 3;
+}
+.canvasjs-chart-credit{
+    display: none;
+}
+.section{
+    min-height: 100vh;
+    padding: 1rem 0!important;
+}
+.section-category{
+    min-height: 55vh;
+    padding: 30px 0;
+    background: url('../images/namanh_profile/bg2.jpg');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+/* background-attachment: fixed; */
+    color: white;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.section-category::before{
+    width: 100%;
+    height: 100%;
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: .8;
+    z-index: -1;
+}
+.section-category .section-header{
+    padding-top: 40px;
+}
+.section-partner .section-header,.section-category .section-header{
+    opacity: 1;
+    z-index: 3;
+    color: white;
+    white-space: normal;
+}
+.section-partner{
+    min-height: 50vh;
+    background: black;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.section-cleandye{
+    min-height: 40vh;
+    background-image: url(../images/namanh_profile/Fabric/clean-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px -5px 3px #054a59;
+}
+.section-partner h4{
+    font-size: 3rem;
+    margin: 0;
+    color: yellow;
+    margin-right: 10px;
+}
+.section-partner p{
+    margin: 0;
+    line-height: 25px;
+}
+.section-client{
+    min-height: 30vh;
+    background: url('../images/namanh_profile/bg-3.jpg');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+/* background-attachment: fixed; */
+    color: white;
+    position: relative;
+    z-index: 1;
+    padding: 0 !important;
+}
+.export-client{
+    color: white;
+}
+.export-client hr{
+    border-top: 1px solid white;
+}
+.section-client h5{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+.section-client .vendor{
+    border-bottom: 1px solid white;
+}
+.export-client img, .local-client img{
+    max-width: 70px;
+    margin: 0 5px 10px 5px;
+    background-color: white;
+    filter: grayscale(1);
+}
+.local-client h4{
+    margin-bottom: 24px;
+}
+.section-fabric .img-control img{
+    opacity: 0;
+    position: absolute;
+}
+.section-fabric p{
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    text-align: justify;
+}
+.section-fabric .fabric-des p{
+    font-size: 1rem;
+}
+.section-fabric img.active{
+    opacity: 1;
+    position: static;
+}
+.section-fabric h3{
+    text-transform: uppercase;
+}
+.section-fabric h4{
+    margin: 25px 0;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    border-bottom: solid 1px #ccc;
+}
+/* .section-fabric h4::before{
+    position: absolute;
+    content:'';
+    width: calc(100% - 60px);
+    height: 1px;
+    border-top: dashed 2px black;
+    z-index: -1;
+    left: 20px;
+} */
+.section-fabric h4 span{
+    padding: 10px 30px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    color: black;
+}
+/* .section-fabric h4 span::before{
+    position: absolute;
+    content: '';
+    width: 95%;
+    height: 80%;
+    border: dashed 2px white;
+    z-index: -1;
+    left: 2%;
+    top: 10%;
+    border-radius: 10px;
+} */
+.section-fabric h4 i{
+    padding-left: 20px;
+}
+.section-fabric h4 .fa-chevron-right{
+    display: none;
+}
+.section-fabric h4.collapsed .fa-chevron-down{
+    display: none;
+}
+.section-fabric h4.collapsed .fa-chevron-right{
+    display: block;
+}
+
+.section-fabric .product-imgs img{
+    margin: 5px;
+    max-width: 30.333%;
+}
+
+.section-repeet {
+    background: linear-gradient(180deg, rgba(0,0,0,1) 42%, rgb(8 8 8) 91%, rgb(17 17 17) 100%);
+    min-height: 50vh;
+    color: white;
+}
+.section-repeet h2{
+    font-size: 3rem;
+}
+.section-repeet img{
+    animation-name: circle;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    margin-right: 30px;
+}
+.section-cer{
+    min-height: 40vh;
+    min-height: unset;
+    justify-content: space-around;
+}
+.section-cer img{
+    flex: 0 1 30%;
+    max-width: 200px;
+}
+.section-cer h3{
+ font-size: 3rem;
+}
+.section-finishing{
+    min-height: 60vh;
+}
+.finishing-item{
+    flex: 0 1 11.111111%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-width: 110px;
+    text-align: center;
+}
+.finishing-item img{
+    max-width: 110px !important;
+    margin-bottom: 15px;
+}
+.section-quote{
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-quote h3{
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.8rem;
+}
+@keyframes circle {
+    from{
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+    to{
+        transform: rotate(360deg);
+        transform-origin: center;
+    }
+}
+.section-repeet video{
+    max-width: 15%;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 60px;
+    height: 25px;
+	background: #007db8;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 999px;
+    transition: 0.3s;
+}
+
+input:checked + label {
+	background: #3be337;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 50px;
+}
+
+@media screen and (max-width: 1201px) {
+    .section{
+        min-height: unset;
+    }
+    .milestone-list{
+        flex-wrap: wrap;
+    }
+    .milestone-list li{
+        width: 100%;
+    }
+    .milestone-list{
+        border-left: solid 1px black;
+        flex-wrap: wrap;
+        border-top: none;
+    }
+    .chart-container{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 998px) {
+    #banner, .section-category, .section-client{
+        background-attachment: unset;
+    }
+    .socials{
+        position: static;
+        display: flex;
+        margin: 20px 0;
+        justify-content: flex-end;
+    }
+    .socials li{
+        margin: 0 10px;
+    }
+    .banner-menu img{
+        max-width: 120px !important;
+    }
+    .container-desktop h2{
+        line-height: 2rem;
+        font-size: 1.5rem;
+    }
+    
+    .milestone-list li{
+        width: 100%;
+    }
+    .section-header{
+        writing-mode: unset;
+        text-orientation: unset;
+        font-size: 2rem;
+        text-align: center;
+        position: static;
+        opacity: 1;
+        color: black;
+        width: 100%;
+    }
+    .section-category .section-header{
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+    .section-category .d-flex, .partner-info{
+        flex-wrap: wrap;
+    }
+    .partner-info > div{
+        text-align: center !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 30px 0;
+    }
+    .section-client h5{
+        writing-mode: unset;
+        text-orientation: unset;
+        font-size: 1.8rem;
+    }
+    .export-client img, .local-client img{
+        max-width: 30%;
+    }
+    .export-client .d-flex, .local-client .d-flex{
+        justify-content: space-between;
+    }
+    [class*='col-md']{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .section-fabric h3{
+        margin-bottom: 0 !important;
+    }
+    .section-fabric .img-control{
+        padding: 0 10px !important;
+    }
+    .section-quote h3{
+        max-width: 80%;
+        font-size: 1.2rem;
+    }
+    .finishing-item img{
+        max-width: 80px !important;
+    }
+    .finishing-item{
+        flex: 0 1 25%;
+    }
+    .finishing-item p{
+        font-size: 12px;
+    }
+    .section-fabric .product-imgs img{
+        max-width: 45%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .section-quote h3{
+        max-width: 95%;
+    }
+}
